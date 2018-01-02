@@ -1,0 +1,31 @@
+{
+  "name": "peer-crdt-example",
+  "version": "0.0.1",
+  "description": "peer-crdt example",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/index.js -d -o public/index.bundle.js",
+    "build:watch": "watchify src/index.js -d -o public/index.bundle.js -v",
+    "start": "npm run build && npm run start:server",
+    "start:server": "serve public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipfs-shipyard/peer-crdt-example.git"
+  },
+  "author": "Pedro Teixeira <i@pgte.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ipfs-shipyard/peer-crdt-example/issues"
+  },
+  "homepage": "https://github.com/ipfs-shipyard/peer-crdt-example#readme",
+  "dependencies": {
+    "browserify": "^14.5.0",
+    "d3": "^4.12.2",
+    "ipfs": "^0.27.5",
+    "peer-crdt": "^0.4.0",
+    "peer-crdt-ipfs": "0.2.0",
+    "serve": "^6.4.3",
+    "watchify": "^3.9.0"
+  }
+}

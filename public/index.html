@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Flipchart</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <style>
+      .line {
+        fill: none;
+        stroke: #11a;
+        stroke-width: 1;
+      }
+      #clear {
+        position: absolute;
+        top: 600px;
+      }
+      #status {
+        position: absolute;
+        top: 550px;
+        color: white;
+      }
+      #flipchart {
+        position: absolute;
+        top: 98px;
+        left: 371px;
+        width: 545px;
+        height: 298px;
+      }
+      body {
+        background-color: #0E1829;
+        background-image: url(flipchart.svg);
+        background-repeat: no-repeat;
+        background-size: 1024px;
+        background-position: top left;
+        background-color: #0E1829;
+      }
+    </style>
+  </head>
+  <body>
+    <svg id="flipchart"></svg>
+    <button id="clear">Clear all</button>
+    <p id="status">Starting...</p>
+    <script src="index.bundle.js"></script>
+  </body>
+</html>
