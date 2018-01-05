@@ -28,7 +28,10 @@ module.exports = async (type, id) => {
   const peerCrdtIpfs = PeerCrdtIpfs(ipfs)
   const CRDT = PeerCRDT
     .defaults(peerCrdtIpfs)
-    .defaults({ encrypt, decrypt })
+    .defaults({
+      signAndEncrypt: encrypt,
+      decryptAndVerify: decrypt
+    })
   const crdt = CRDT.create(type, id)
   await crdt.network.start()
   return crdt
